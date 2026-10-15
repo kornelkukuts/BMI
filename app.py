@@ -1,12 +1,12 @@
 import streamlit as st
 
 # Oldal konfiguráció
-st.set_page_config(page_title="BMI Kalkulátor", page_icon="??", layout="centered")
+st.set_page_config(page_title="BMI Kalkulátor", page_icon="⚖️", layout="centered")
 
-st.title("?? Testtömegindex (BMI) Kalkulátor")
+st.title("⚖️ Testtömegindex (BMI) Kalkulátor")
 st.markdown("Számítsd ki a testtömegindexedet és tudd meg az egészségügyi kategóriádat.")
 
-# Beviteli mezõk
+# Beviteli mezők
 col1, col2 = st.columns(2)
 
 with col1:
@@ -34,7 +34,6 @@ def get_bmi_category(bmi):
 # Számítás gomb
 if st.button("BMI Kiszámítása", type="primary"):
     try:
-        # Pontra cseréljük a vesszõt, hogy float-tá alakítható legyen
         height_clean = height_str.strip().replace(",", ".")
         weight_clean = weight_str.strip().replace(",", ".")
         
